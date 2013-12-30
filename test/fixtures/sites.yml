@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  superficie: 1
+  type_site: 
+  liens: 
+  description: MyString
+  addresse: MyString
+  ville: MyString
+  pays: MyString
+  string: MyString
+  tel: MyString
+  horaire: MyString
+
+two:
+  name: MyString
+  superficie: 1
+  type_site: 
+  liens: 
+  description: MyString
+  addresse: MyString
+  ville: MyString
+  pays: MyString
+  string: MyString
+  tel: MyString
+  horaire: MyString

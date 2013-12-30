@@ -1,0 +1,327 @@
+  [1m[36m (59.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (56.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTypeGibiers (20131230123848)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "type_gibiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131230123848"]]
+  [1m[36m (53.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGibiers (20131230124019)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "gibiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "icon" varchar(255), "type_gibier" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131230124019"]]
+  [1m[36m (64.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/type_gibiers" for 193.238.148.138 at 2013-12-30 13:41:23 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TypeGibiersController#index as HTML
+  [1m[35mTypeGibier Load (0.6ms)[0m  SELECT "type_gibiers".* FROM "type_gibiers"
+  Rendered type_gibiers/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 5968ms (Views: 5911.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 193.238.148.138 at 2013-12-30 13:41:29 +0100
+
+
+Started GET "/assets/type_gibiers.css?body=1" for 193.238.148.138 at 2013-12-30 13:41:29 +0100
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 193.238.148.138 at 2013-12-30 13:41:29 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 193.238.148.138 at 2013-12-30 13:41:29 +0100
+
+
+Started GET "/assets/gibiers.css?body=1" for 193.238.148.138 at 2013-12-30 13:41:29 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:29 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:29 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:29 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:29 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:29 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:29 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:29 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:30 +0100
+
+
+Started GET "/assets/type_gibiers.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:30 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:30 +0100
+
+
+Started GET "/assets/gibiers.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:30 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:30 +0100
+
+
+Started GET "/assets/application.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:30 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:30 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:30 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:30 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:30 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:30 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:30 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:30 +0100
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 193.238.148.138 at 2013-12-30 13:41:30 +0100
+
+
+Started GET "/type_gibiers" for 193.238.148.138 at 2013-12-30 13:43:09 +0100
+Processing by TypeGibiersController#index as HTML
+  [1m[36mTypeGibier Load (0.6ms)[0m  [1mSELECT "type_gibiers".* FROM "type_gibiers"[0m
+  Rendered type_gibiers/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 148ms (Views: 144.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/type_gibiers.css?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/type_gibiers.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/gibiers.css?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/gibiers.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/application.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 193.238.148.138 at 2013-12-30 13:43:10 +0100
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 193.238.148.138 at 2013-12-30 13:43:13 +0100
+
+
+Started GET "/gibiers" for 193.238.148.138 at 2013-12-30 13:43:22 +0100
+Processing by GibiersController#index as HTML
+  [1m[35mGibier Load (0.7ms)[0m  SELECT "gibiers".* FROM "gibiers"
+  Rendered gibiers/index.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 716ms (Views: 659.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/type_gibiers" for 193.238.148.138 at 2013-12-30 13:43:23 +0100
+Processing by TypeGibiersController#index as HTML
+  [1m[36mTypeGibier Load (0.5ms)[0m  [1mSELECT "type_gibiers".* FROM "type_gibiers"[0m
+  Rendered type_gibiers/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 142ms (Views: 136.0ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSites (20131230125206)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSites (20131230125206)
+  [1m[35m (1.1ms)[0m  begin transaction
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "superficie" integer, "type_site" varchar(255), "liens" varchar(255), "description" varchar(255), "addresse" varchar(255), "ville" varchar(255), "pays" varchar(255), "string" varchar(255), "tel" varchar(255), "horaire" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131230125206"]]
+  [1m[36m (76.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateSitesGibiers (20131230125246)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "sites_gibiers" ("site_id" integer, "gibier_id" integer) [0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131230125246"]]
+  [1m[36m (69.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/type_gibiers" for 193.238.148.138 at 2013-12-30 13:59:46 +0100
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by TypeGibiersController#index as HTML
+  [1m[36mTypeGibier Load (0.8ms)[0m  [1mSELECT "type_gibiers".* FROM "type_gibiers"[0m
+  Rendered type_gibiers/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 829ms (Views: 818.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 193.238.148.138 at 2013-12-30 13:59:47 +0100
+
+
+Started GET "/assets/gibiers.css?body=1" for 193.238.148.138 at 2013-12-30 13:59:47 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 193.238.148.138 at 2013-12-30 13:59:47 +0100
+
+
+Started GET "/assets/type_gibiers.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:47 +0100
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 193.238.148.138 at 2013-12-30 13:59:47 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:47 +0100
+
+
+Started GET "/assets/type_gibiers.css?body=1" for 193.238.148.138 at 2013-12-30 13:59:47 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:47 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:47 +0100
+
+
+Started GET "/assets/sites.css?body=1" for 193.238.148.138 at 2013-12-30 13:59:47 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:47 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:47 +0100
+
+
+Started GET "/assets/sites.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:47 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:47 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:47 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:47 +0100
+
+
+Started GET "/assets/application.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:47 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:48 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:48 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:48 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:48 +0100
+
+
+Started GET "/assets/gibiers.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:48 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:48 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:50 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:50 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:50 +0100
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:50 +0100
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 193.238.148.138 at 2013-12-30 13:59:50 +0100
+
+
+Started GET "/sites" for 193.238.148.138 at 2013-12-30 13:59:53 +0100
+Processing by SitesController#index as HTML
+  [1m[35mSite Load (5.4ms)[0m  SELECT "sites".* FROM "sites"
+  Rendered sites/index.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 333ms (Views: 314.2ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 193.238.148.138 at 2013-12-30 14:37:23 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (4.5ms)
+Completed 200 OK in 147ms (Views: 96.1ms | ActiveRecord: 0.0ms)

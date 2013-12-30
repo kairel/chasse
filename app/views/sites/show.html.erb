@@ -1,0 +1,41 @@
+<%- model_class = Site -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @site.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:superficie) %>:</strong></dt>
+  <dd><%= @site.superficie %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:type_site) %>:</strong></dt>
+  <dd><%= @site.type_site %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:liens) %>:</strong></dt>
+  <dd><%= @site.liens %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+  <dd><%= @site.description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:addresse) %>:</strong></dt>
+  <dd><%= @site.addresse %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:ville) %>:</strong></dt>
+  <dd><%= @site.ville %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pays) %>:</strong></dt>
+  <dd><%= @site.pays %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:string) %>:</strong></dt>
+  <dd><%= @site.string %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tel) %>:</strong></dt>
+  <dd><%= @site.tel %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:horaire) %>:</strong></dt>
+  <dd><%= @site.horaire %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              sites_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_site_path(@site), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              site_path(@site),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
